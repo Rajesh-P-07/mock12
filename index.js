@@ -8,11 +8,11 @@ const app=express();
 app.use(express.json());
 app.use(cors());
 
-// app.get("/",(req,res)=>{
-//     res.end("Home page");
-// });
+app.get("/",(req,res)=>{
+    res.end("Home page");
+});
 
-app.use("/",userRouter);
+app.use("/users",userRouter);
 
 app.listen(process.env.port,async()=>{
     try{
